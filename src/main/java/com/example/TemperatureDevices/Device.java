@@ -1,19 +1,27 @@
 package com.example.TemperatureDevices;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table
 public class Device {
 
 	@Id
+	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public long id;
+	private Long id;
+	@Column
 	public String name;
-	public float currentTemp;
-	public float maxTemp;
-	public float minTemp;
+	@Column
+	public Float currenttemp;
+	@Column
+	public Float maxtemp;
+	@Column
+	public Float mintemp;
 	
 }
